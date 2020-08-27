@@ -1,3 +1,20 @@
+
+___________________________________________________________________
+2020/08/27 Michelle
+1. What I have done / not done since last Scrum?
+done - design database & take screen shot
+done - complete project proposal before class starts tommorrow
+not done - add user cards with checklist in Trello
+done - create Trello board and make it public
+
+2. What I plan to do from this scrum to next? (Aug 27 9am)
+- redesign database adding scheduler take screen shot
+- complete project proposal upload to mio by midnight tonight
+- add user cards with checklist in Trello (min 10 cards)
+- Recreate GitHub repository due to fatal error in SourceTree
+
+3.  Where do I need assistance? What do I need to figure out?
+UserIdentity & iCalendar
 ___________________________________________________________________
 2020/08/26 Michelle
 1. What I have done / not done since last Scrum?
