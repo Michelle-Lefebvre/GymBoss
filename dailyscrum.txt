@@ -1,13 +1,29 @@
-
 ___________________________________________________________________
-2020/08/27 Michelle
+2020/08/31 Michelle
+1. What I have done / not done since last Scrum?
+done - add user cards with checklist in Trello (min 10 cards)
+done- investigate low memory solutions (asked Gregory, buy usb stick)
+done - find scaffolding for crude
+done - investigate low memory solutions 
+done - portfolio uploaded to ipd21.com
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- add UserIdentity
+- user can register
+- user can login 
+- UserIdentity & iCalendar
+
+3.  Where do I need assistance? What do I need to figure out?
+- ask why there is an error on my subdomain michelle.ipd21.com
+___________________________________________________________________
+2020/08/28 Michelle
 1. What I have done / not done since last Scrum?
 not done - add user cards with checklist in Trello
 done - redesign database adding scheduler take screen shot
 done - complete project proposal upload to mio by midnight tonight
 done - Recreate GitHub repository due to fatal error in SourceTree
 
-2. What I plan to do from this scrum to next? (Aug 31 9am)
+2. What I plan to do from this scrum to next? (Monday Aug 31 9am)
 - add user cards with checklist in Trello (min 10 cards)
 - add UserIdentity
 - user can register
