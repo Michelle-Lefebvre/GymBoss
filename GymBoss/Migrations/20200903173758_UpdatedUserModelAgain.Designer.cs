@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace GymBoss.Data.Migrations
+namespace GymBoss.Migrations
 {
     [DbContext(typeof(GymBossContext))]
-    [Migration("20200903144348_CreateIdentitySchema")]
-    partial class CreateIdentitySchema
+    [Migration("20200903173758_UpdatedUserModelAgain")]
+    partial class UpdatedUserModelAgain
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

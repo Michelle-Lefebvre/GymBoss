@@ -1,15 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace GymBoss.Data.Migrations
+namespace GymBoss.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class UpdatedUserModelAgain : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Users");
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -47,6 +44,66 @@ namespace GymBoss.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Results",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ClientId = table.Column<int>(nullable: false),
+                    PTrainerId = table.Column<int>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: false),
+                    RestingHeartRate = table.Column<int>(nullable: false),
+                    Height = table.Column<int>(nullable: false),
+                    Weight = table.Column<int>(nullable: false),
+                    BMI = table.Column<int>(nullable: false),
+                    Neck = table.Column<int>(nullable: false),
+                    Bust = table.Column<int>(nullable: false),
+                    Chest = table.Column<int>(nullable: false),
+                    UpperArm = table.Column<int>(nullable: false),
+                    Forearm = table.Column<int>(nullable: false),
+                    Waist = table.Column<int>(nullable: false),
+                    Hips = table.Column<int>(nullable: false),
+                    Thigh = table.Column<int>(nullable: false),
+                    Calves = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Results", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Schedules",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    PTrainerId = table.Column<int>(nullable: false),
+                    ClientId = table.Column<int>(nullable: false),
+                    EmailReminder = table.Column<string>(nullable: true),
+                    StartDate = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Schedules", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Trainers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Certifications = table.Column<string>(nullable: true),
+                    Education = table.Column<string>(nullable: true),
+                    Specialties = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Trainers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -211,41 +268,19 @@ namespace GymBoss.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Results");
+
+            migrationBuilder.DropTable(
+                name: "Schedules");
+
+            migrationBuilder.DropTable(
+                name: "Trainers");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Allergies = table.Column<string>(type: "TEXT", nullable: true),
-                    Cell = table.Column<string>(type: "TEXT", nullable: true),
-                    City = table.Column<string>(type: "TEXT", nullable: true),
-                    Code = table.Column<string>(type: "TEXT", nullable: true),
-                    Email = table.Column<string>(type: "TEXT", nullable: true),
-                    EmerFirstName = table.Column<string>(type: "TEXT", nullable: true),
-                    EmerLastName = table.Column<string>(type: "TEXT", nullable: true),
-                    EmerPhone1 = table.Column<string>(type: "TEXT", nullable: true),
-                    EmerPhone2 = table.Column<string>(type: "TEXT", nullable: true),
-                    FirstName = table.Column<string>(type: "TEXT", nullable: true),
-                    Injuries = table.Column<string>(type: "TEXT", nullable: true),
-                    IsClient = table.Column<int>(type: "INTEGER", nullable: false),
-                    IsManager = table.Column<int>(type: "INTEGER", nullable: false),
-                    IsTrainer = table.Column<int>(type: "INTEGER", nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", nullable: true),
-                    Phone = table.Column<string>(type: "TEXT", nullable: true),
-                    Province = table.Column<string>(type: "TEXT", nullable: true),
-                    StartDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Street = table.Column<string>(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                });
         }
     }
 }

@@ -14,9 +14,15 @@ namespace GymBoss.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
+            /*
             builder.ConfigureServices((context, services) => {
                 services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<GymBossContext>();
+            }); */
+            builder.ConfigureServices((context, services) => {
+            services.AddDbContext<GymBossContext>(options =>
+                options.UseSqlite(
+                    context.Configuration.GetConnectionString("DefaultConnection")));
             });
             /*
             builder.ConfigureServices((context, services) => {
