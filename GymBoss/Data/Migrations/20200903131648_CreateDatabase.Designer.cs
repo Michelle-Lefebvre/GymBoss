@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GymBoss.Data.Migrations
 {
     [DbContext(typeof(GymBossContext))]
-    [Migration("20200903130204_CreateDatabase")]
+    [Migration("20200903131648_CreateDatabase")]
     partial class CreateDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
