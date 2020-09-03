@@ -73,9 +73,9 @@ namespace GymBoss.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    IsManager = table.Column<string>(nullable: true),
-                    IsTrainer = table.Column<string>(nullable: true),
-                    IsClient = table.Column<string>(nullable: true),
+                    IsManager = table.Column<int>(nullable: false),
+                    IsTrainer = table.Column<int>(nullable: false),
+                    IsClient = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Phone = table.Column<string>(nullable: true),

@@ -1,5 +1,19 @@
 ___________________________________________________________________
-2020/08/31 Michelle
+2020/09/03 Michelle
+1. What I have done / not done since last Scrum?
+done - add classes to create database but something is wrong
+done - michelle.ipd21.com is working
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- add UserIdentity
+- user can register
+- user can login 
+- UserIdentity & iCalendar
+
+3.  Where do I need assistance? What do I need to figure out?
+- ask why database wasn't created
+___________________________________________________________________
+2020/09/02 Michelle
 1. What I have done / not done since last Scrum?
 done - add user cards with checklist in Trello (min 10 cards)
 done- investigate low memory solutions (asked Gregory, buy usb stick)

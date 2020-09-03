@@ -4,9 +4,9 @@ namespace GymBoss.Models
     public class User
     {
         public int Id { get; set; }
-        public string IsManager { get; set; }
-        public string IsTrainer { get; set; }
-        public string IsClient { get; set; }
+        public int IsManager { get; set; }
+        public int IsTrainer { get; set; }
+        public int IsClient { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
