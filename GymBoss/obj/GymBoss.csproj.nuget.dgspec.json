@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/GymBoss.csproj": {}
+    "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/GymBoss.csproj": {}
   },
   "projects": {
-    "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/GymBoss.csproj": {
+    "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/GymBoss.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/GymBoss.csproj",
+        "projectUniqueName": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/GymBoss.csproj",
         "projectName": "GymBoss",
-        "projectPath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/GymBoss.csproj",
+        "projectPath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/GymBoss.csproj",
         "packagesPath": "/Users/michellelefebvre/.nuget/packages/",
-        "outputPath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/obj/",
+        "outputPath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -39,13 +39,31 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.7, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.7, )"
             },
