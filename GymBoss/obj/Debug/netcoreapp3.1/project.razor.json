@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/GymBoss.csproj",
+  "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/GymBoss.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,37 +14392,37 @@
   "RootNamespace": "GymBoss",
   "Documents": [
     {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/_ViewImports.cshtml",
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/Shared/_Layout.cshtml",
-      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/_ViewStart.cshtml",
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/Privacy.cshtml",
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/michellelefebvre/IPD21-ASP-DotNet/GymBoss/Pages/Index.cshtml",
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/Shared/_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/michellelefebvre/IPD21-ASP-Project/GymBoss/Pages/Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"
     }
