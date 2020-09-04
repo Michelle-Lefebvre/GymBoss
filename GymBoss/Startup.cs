@@ -30,7 +30,7 @@ namespace GymBoss
             services.AddDbContext<GymBossContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<GymBossContext>();
             services.AddRazorPages();
             services.Configure<IdentityOptions>(options =>
