@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Sessions</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -14,7 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Session[0].ClietnID)
+                @Html.DisplayNameFor(model => model.Session[0].TrainerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].ClientID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].DayTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].EmailReminder)
             </th>
             <th></th>
         </tr>
@@ -23,7 +32,16 @@
 @foreach (var item in Model.Session) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ClietnID)
+                @Html.DisplayFor(modelItem => item.TrainerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DayTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailReminder)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.SessionID">Edit</a> |

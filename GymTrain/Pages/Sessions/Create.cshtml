@@ -18,9 +18,19 @@
                 <select asp-for="Session.TrainerID" class ="form-control" asp-items="ViewBag.TrainerID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Session.ClietnID" class="control-label"></label>
-                <input asp-for="Session.ClietnID" class="form-control" />
-                <span asp-validation-for="Session.ClietnID" class="text-danger"></span>
+                <label asp-for="Session.ClientID" class="control-label"></label>
+                <input asp-for="Session.ClientID" class="form-control" />
+                <span asp-validation-for="Session.ClientID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Session.DayTime" class="control-label"></label>
+                <input asp-for="Session.DayTime" class="form-control" />
+                <span asp-validation-for="Session.DayTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Session.EmailReminder" class="control-label"></label>
+                <input asp-for="Session.EmailReminder" class="form-control" />
+                <span asp-validation-for="Session.EmailReminder" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
