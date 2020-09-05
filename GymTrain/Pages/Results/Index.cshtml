@@ -1,0 +1,120 @@
+@page
+@model GymTrain.Pages.Results.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Results List</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].TrainerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].RestingHeartRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].BMI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Neck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Bust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Chest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].UpperArm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Forearm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Waist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Hips)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Thigh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].Calves)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Result) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestingHeartRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BMI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Neck)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpperArm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Forearm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Waist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hips)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thigh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calves)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ResultID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ResultID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ResultID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

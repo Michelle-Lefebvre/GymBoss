@@ -1,0 +1,126 @@
+___________________________________________________________________
+2020/09/05 Michelle
+1. What I have done / not done since last Scrum?
+done - add user roles
+done - built scaffolding for Clients, Sessions, Trainers and Results
+Renamed project The Gym Train
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- create seed for Trainers
+- fix register from
+- add crud to project
+- user can view trainers
+- start thinking about slide content
+- create database diagram
+
+3.  Where do I need assistance? What do I need to figure out?
+Having problem with 2 context files. Default from UserIdentity & added classes
+___________________________________________________________________
+2020/09/04pm Michelle
+1. What I have done / not done since last Scrum?
+done - add user roles
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- create seed for Trainers
+- fix register from
+- add crud to project
+- user can view trainers
+- start thinking about slide content
+- create database diagram
+
+3.  Where do I need assistance? What do I need to figure out?
+
+___________________________________________________________________
+2020/09/04 Michelle
+1. What I have done / not done since last Scrum?
+done - add UserIdentity
+done - user can register
+done - user can login 
+not done - UserIdentity & iCalendar
+Yesterday Gregory helped me out tremedously in class! I thought I was good to continue however I couldn't login or register. Things didn't look right so I decided to create a new project because I felt I had spent too much time fixing instead of completing tasks. So I created GymBoss2.
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- user creates profile
+- UserIdentity & iCalendar
+
+3.  Where do I need assistance? What do I need to figure out?
+
+___________________________________________________________________
+2020/09/03 Michelle
+1. What I have done / not done since last Scrum?
+done - add classes to create database but something is wrong
+done - michelle.ipd21.com is working
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- add UserIdentity
+- user can register
+- user can login 
+- UserIdentity & iCalendar
+
+3.  Where do I need assistance? What do I need to figure out?
+- ask why database wasn't created
+___________________________________________________________________
+2020/09/02 Michelle
+1. What I have done / not done since last Scrum?
+done - add user cards with checklist in Trello (min 10 cards)
+done- investigate low memory solutions (asked Gregory, buy usb stick)
+done - find scaffolding for crude
+done - investigate low memory solutions 
+done - portfolio uploaded to ipd21.com
+
+2. What I plan to do from this scrum to next? (Tomorrow 9am)
+- add UserIdentity
+- user can register
+- user can login 
+- UserIdentity & iCalendar
+
+3.  Where do I need assistance? What do I need to figure out?
+- ask why there is an error on my subdomain michelle.ipd21.com
+___________________________________________________________________
+2020/08/28 Michelle
+1. What I have done / not done since last Scrum?
+not done - add user cards with checklist in Trello
+done - redesign database adding scheduler take screen shot
+done - complete project proposal upload to mio by midnight tonight
+done - Recreate GitHub repository due to fatal error in SourceTree
+
+2. What I plan to do from this scrum to next? (Monday Aug 31 9am)
+- add user cards with checklist in Trello (min 10 cards)
+- add UserIdentity
+- user can register
+- user can login
+- investigate low memory solutions
+- find scaffolding for crude
+
+3.  Where do I need assistance? What do I need to figure out?
+UserIdentity & iCalendar
+- investigate low memory solutions 
+Error: System.IO.IOException: No space left on device
+___________________________________________________________________
+2020/08/27 Michelle
+1. What I have done / not done since last Scrum?
+done - design database & take screen shot
+done - complete project proposal before class starts tommorrow
+not done - add user cards with checklist in Trello
+done - create Trello board and make it public
+
+2. What I plan to do from this scrum to next? (Aug 28 9am)
+- redesign database adding schedulerç take screen shot
+- complete project proposal upload to mio by midnight tonight
+- add user cards with checklist in Trello (min 10 cards)
+- Recreate GitHub repository due to fatal error in SourceTree
+
+3.  Where do I need assistance? What do I need to figure out?
+UserIdentity & iCalendar
+___________________________________________________________________
+2020/08/26 Michelle
+1. What I have done / not done since last Scrum?
+Not applicable
+
+2. What I plan to do from this scrum to next? (Aug 27 9am)
+- design database & take screen shot
+- complete project proposal before class starts tommorrow
+- add user cards with checklist in Trello
+
+3. Where do I need assistance?
+none

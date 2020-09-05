@@ -27,11 +27,17 @@ namespace GymBoss2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+            .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                // .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
             services.Configure<IdentityOptions>(options =>
     {
@@ -67,7 +73,8 @@ namespace GymBoss2
 }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+        UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -88,11 +95,47 @@ namespace GymBoss2
 
             app.UseAuthentication();
             app.UseAuthorization();
+            SeedUsersAndRoles(userManager, roleManager);
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
             });
         }
+
+        private void SeedUsersAndRoles(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager) {
+            // note: we only seed roles in this particular example but
+            // you may want to seed users with assigned roles too (e.g. an Administrator user)
+            string[] roleNamesList = new string[] { "Trainer", "Admin" };
+
+            foreach (string roleName in roleNamesList)
+            {
+                if (!roleManager.RoleExistsAsync(roleName).Result) {
+                    IdentityRole role = new IdentityRole();
+                    role.Name = roleName;
+                    IdentityResult result = roleManager.CreateAsync(role).Result;                
+                }
+
+            }
+
+            // WARNING: For testing ONLY. Do NOT do it on a production system!
+            // Create an Administrator. 
+            string adminEmail = "admin@admin.com";
+            string adminPass = "Admin123!"; // terrible password
+            if (userManager.FindByNameAsync(adminEmail).Result == null)
+            {
+                IdentityUser user = new IdentityUser();
+                user.UserName = adminEmail;
+                user.Email = adminEmail;
+				user.EmailConfirmed = true;
+                IdentityResult result = userManager.CreateAsync(user, adminPass).Result;
+
+                if (result.Succeeded)
+                {
+                    userManager.AddToRoleAsync(user, "Admin").Wait();
+                }
+            }
+        }
+
     }
 }

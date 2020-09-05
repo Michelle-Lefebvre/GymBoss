@@ -1,0 +1,66 @@
+@page
+@model GymTrain.Pages.Trainers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Trainer List</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Trainer[0].Certified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trainer[0].Education)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trainer[0].Specialty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trainer[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trainer[0].Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trainer[0].IsMale)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Trainer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Certified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Education)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsMale)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.TrainerID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.TrainerID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.TrainerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

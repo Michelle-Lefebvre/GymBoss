@@ -1,0 +1,110 @@
+@page
+@model GymTrain.Pages.Results.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Result</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Result.ResultID" />
+            <div class="form-group">
+                <label asp-for="Result.ClientID" class="control-label"></label>
+                <select asp-for="Result.ClientID" class="form-control" asp-items="ViewBag.ClientID"></select>
+                <span asp-validation-for="Result.ClientID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.TrainerID" class="control-label"></label>
+                <input asp-for="Result.TrainerID" class="form-control" />
+                <span asp-validation-for="Result.TrainerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Date" class="control-label"></label>
+                <input asp-for="Result.Date" class="form-control" />
+                <span asp-validation-for="Result.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.RestingHeartRate" class="control-label"></label>
+                <input asp-for="Result.RestingHeartRate" class="form-control" />
+                <span asp-validation-for="Result.RestingHeartRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Height" class="control-label"></label>
+                <input asp-for="Result.Height" class="form-control" />
+                <span asp-validation-for="Result.Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Weight" class="control-label"></label>
+                <input asp-for="Result.Weight" class="form-control" />
+                <span asp-validation-for="Result.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.BMI" class="control-label"></label>
+                <input asp-for="Result.BMI" class="form-control" />
+                <span asp-validation-for="Result.BMI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Neck" class="control-label"></label>
+                <input asp-for="Result.Neck" class="form-control" />
+                <span asp-validation-for="Result.Neck" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Bust" class="control-label"></label>
+                <input asp-for="Result.Bust" class="form-control" />
+                <span asp-validation-for="Result.Bust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Chest" class="control-label"></label>
+                <input asp-for="Result.Chest" class="form-control" />
+                <span asp-validation-for="Result.Chest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.UpperArm" class="control-label"></label>
+                <input asp-for="Result.UpperArm" class="form-control" />
+                <span asp-validation-for="Result.UpperArm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Forearm" class="control-label"></label>
+                <input asp-for="Result.Forearm" class="form-control" />
+                <span asp-validation-for="Result.Forearm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Waist" class="control-label"></label>
+                <input asp-for="Result.Waist" class="form-control" />
+                <span asp-validation-for="Result.Waist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Hips" class="control-label"></label>
+                <input asp-for="Result.Hips" class="form-control" />
+                <span asp-validation-for="Result.Hips" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Thigh" class="control-label"></label>
+                <input asp-for="Result.Thigh" class="form-control" />
+                <span asp-validation-for="Result.Thigh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result.Calves" class="control-label"></label>
+                <input asp-for="Result.Calves" class="form-control" />
+                <span asp-validation-for="Result.Calves" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
