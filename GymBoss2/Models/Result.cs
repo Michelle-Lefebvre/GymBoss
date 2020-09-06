@@ -1,11 +1,13 @@
 using System;
+using System.Collections.Generic;
+
 namespace GymBoss2.Models
 {
     public class Result
     {
-        public int Id { get; set; }
-        public int ClientId { get; set; }
-        public int TrainerId { get; set; }
+        public int ResultID { get; set; }
+        public int ClientID { get; set; }
+        public int TrainerID { get; set; }
         public DateTime Date { get; set; }
         public int RestingHeartRate { get; set; }
         public int Height { get; set; }
@@ -20,5 +22,7 @@ namespace GymBoss2.Models
         public int Hips { get; set; }
         public int Thigh { get; set; }
         public int Calves { get; set; }
+
+        public ICollection<Result> Results { get; set; }
     }
 }
