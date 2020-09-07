@@ -31,7 +31,8 @@ namespace GymTrain
                 try
                 {
                     var context = services.GetRequiredService<GymTrainContext>();
-                    context.Database.EnsureCreated();
+                    // context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

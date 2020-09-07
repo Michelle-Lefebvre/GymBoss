@@ -10,9 +10,12 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table center">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Result[0].ClientID)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Result[0].TrainerID)
             </th>
@@ -64,6 +67,9 @@
     <tbody>
 @foreach (var item in Model.Result) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientID)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TrainerID)
             </td>

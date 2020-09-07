@@ -14,44 +14,64 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].LastName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.LastNameSort">
+                @Html.DisplayNameFor(model => model.Trainers[0].LastName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].FirstMidName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.FirstMidNameSort">
+                @Html.DisplayNameFor(model => model.Trainers[0].FirstMidName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Certified)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.CertifiedSort">
+                @Html.DisplayNameFor(model => model.Trainers[0].Certified)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Education)
+                @Html.DisplayNameFor(model => model.Trainers[0].Education)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Specialty)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.SpecialtySort">
+                @Html.DisplayNameFor(model => model.Trainers[0].Specialty)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Description)
+                @Html.DisplayNameFor(model => model.Trainers[0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Image)
+                @Html.DisplayNameFor(model => model.Trainers[0].Image)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].IsMale)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.IsMaleSort">
+
+                @Html.DisplayNameFor(model => model.Trainers[0].IsMale)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Pkg5)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.Pkg5Sort">
+
+                @Html.DisplayNameFor(model => model.Trainers[0].Pkg5)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Pkg12)
+                @Html.DisplayNameFor(model => model.Trainers[0].Pkg12)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Trainer[0].Pkg20)
+                @Html.DisplayNameFor(model => model.Trainers[0].Pkg20)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Trainer) {
+@foreach (var item in Model.Trainers) {
         <tr>
+            <td>
+                @Html.DisplayFor(model => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.FirstMidName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Certified)
             </td>

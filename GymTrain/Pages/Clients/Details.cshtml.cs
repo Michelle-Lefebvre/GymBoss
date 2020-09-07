@@ -28,7 +28,7 @@ namespace GymTrain.Pages.Clients
                 return NotFound();
             }
 
-            Client = await _context.Clients.FirstOrDefaultAsync(m => m.ClientID == id);
+            Client = await _context.Client.FirstOrDefaultAsync(m => m.ClientID == id);
 
             if (Client == null)
             {

@@ -14,9 +14,9 @@ namespace GymBoss2.Models
         public string Description { get; set; }
         public string Image { get; set; }
         public int IsMale { get; set; }
-        public int Pkg5 { get; set; }
-        public int Pkg12 { get; set; }
-        public int Pkg20 { get; set; }
+        public decimal Pkg5 { get; set; }
+        public decimal Pkg12 { get; set; }
+        public decimal Pkg20 { get; set; }
 
         public ICollection<Client> Clients { get; set; }
         public ICollection<Session> Sessions { get; set; }

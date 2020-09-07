@@ -14,19 +14,26 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Client[0].LastName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.FirstMidNameSort">
+                @Html.DisplayNameFor(model => model.Clients[0].FirstMidName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Client[0].FirstMidName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.LastNameSort">
+                @Html.DisplayNameFor(model => model.Clients[0].LastName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Client[0].StartDate)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.StartDateSort">
+                @Html.DisplayNameFor(model => model.Clients[0].StartDate) 
+                </a>               
             </th>
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Client) {
+@foreach (var item in Model.Clients) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.LastName)
