@@ -1,4 +1,13 @@
 ___________________________________________________________________
+2020/09/08
+Still trying to resolve issue that prevents 
+Spent another 1h45min before presentation on this error but wan't able to fix it:
+
+unable to start kestrel. system.io.ioexception: failed to bind to address https://127.0.0.1:5001: address already in use. ---> microsoft.aspnetcore.connections.addressinuseexception: address already in use ---> system.net.sockets.socketexception (48): address already in use at system.net.sockets.socket.updatestatusaftersocketerrorand throwexception(socketerror error, string callername) at system.net.sockets.socket.dobind(endpoint endpointsnapshot, socketaddress socketaddress) at system.net.sockets.socket.bind(endpoint localep) at microsoft.aspnetcore.server.kestrel.transport.sockets.socket connection listener.bind()
+___________________________________________________________________
+2020/09/07 afternoon decided I had no choice but to remove the login/register/and roles.
+Wasted too much time trying to fix the repeating error and not enough time on the project itself.
+___________________________________________________________________
 2020/09/05 Michelle
 1. What I have done / not done since last Scrum?
 done - add user roles
