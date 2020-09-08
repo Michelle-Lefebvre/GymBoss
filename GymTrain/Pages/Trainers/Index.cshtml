@@ -5,11 +5,21 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Trainer List</h1>
+<h1>Our Trainers</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by First Name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -36,9 +46,9 @@
                 @Html.DisplayNameFor(model => model.Trainers[0].Specialty)
                 </a>
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Trainers[0].Description)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Trainers[0].Image)
             </th>
@@ -60,7 +70,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Trainers[0].Pkg20)
             </th>
-            <th></th>
+            <th>
+                Modify
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -81,18 +93,29 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Specialty)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.Description)
-            </td>
+            </td> *@
             <td>
-                @Html.DisplayFor(modelItem => item.Image)
+                <img class="friend-image img-fluid img-thumbnail"
+                        src="~/Images/@Html.DisplayFor(modelItem => item.Image)"
+                        alt="Image of @Html.DisplayFor(modelItem => item.FirstMidName)" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsMale)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Pkg5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pkg12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pkg20)
+            </td>
+            <td>
                 <a asp-page="./Edit" asp-route-id="@item.TrainerID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.TrainerID">Details</a> |
+                <a asp-page="./Details" asp-route-id="@item.TrainerID">View</a> |
                 <a asp-page="./Delete" asp-route-id="@item.TrainerID">Delete</a>
             </td>
         </tr>

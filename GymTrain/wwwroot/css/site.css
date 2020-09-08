@@ -1,27 +1,56 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿/*COLOR PALETTE:    lightsoftGreen #9be3ab    medsoftGreen  #4bc6b2    medBlue #4f87cb    eggplant #65578f    darkGrey #3c4d67   */
+body{
+  background-color: whitesmoke;
+  color: #2b2a2a;
+  font-size: 1.2rem;
+}
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #65578f;
+}
+a:hover {
+  color: #4bc6b2;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.but {
+  color: #3c4d67;
+  font-weight: 600;
+  text-decoration: none;
+
+  border:2px solid #3c4d67;
+  border-radius: 5px;
+}
+a.but:hover {
+  border:2px solid #4bc6b2;
+  color: #4bc6b2;
+  text-decoration: none;
+}
+
+/* Trainer Index styles
+-------------------------------------------------- */
+.friendInfo {
+  background-color: lightgray;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
+  width: calc(100% - 0.6rem);
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #9be3ab;
+  border: #3c4d67;
 }
 
 /* Sticky footer styles

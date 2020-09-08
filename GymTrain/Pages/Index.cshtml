@@ -4,40 +4,41 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="row mb-auto">
-    <div class="col-md-4">
-        <div class="row no-gutters border mb-4">
-            <div class="col p-4 mb-4 ">
-                <p class="card-text">
-                    GymTrain is a sample application that
-                    demonstrates how to use Entity Framework Core in an
-                    ASP.NET Core Razor Pages web app.
-                </p>
-            </div>
-        </div>
+<h1>Our Trainers</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by First Name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="/Index">Back to full List</a>
+        </p>
     </div>
-    <div class="col-md-4">
-        <div class="row no-gutters border mb-4">
-            <div class="col p-4 d-flex flex-column position-static">
-                <p class="card-text mb-auto">
-                    You can build the application by following the steps in a series of tutorials.
-                </p>
-                <p>
-                    <a href="https://docs.microsoft.com/aspnet/core/data/ef-rp/intro" class="stretched-link">See the tutorial</a>
-                </p>
+</form>
+
+<div class="container">
+  
+        <div id="friendsWrapper" class="row ml-3">
+        @foreach (var item in Model.Trainers) 
+        {
+        <div class="col-sm-4 mt-5 mb-5 friendInfo">
+                <div class="friendInfo">
+                    <h3 class="pt-3 pb-3">@item.FirstMidName @item.LastName</h3>
+                    <h6><span>Certified: </span>@Html.DisplayFor(modelItem => item.Certified)</h6>
+                    <img class="friend-image img-fluid img-thumbnail" src="~/Images/@item.Image"
+                        alt="Image of @item.FirstMidName" />
+                </div>
+         
+            <div class="action p-2 friendInfo" >
+                <h6>Specialty: @Html.DisplayFor(modelItem => item.Specialty)</h6>
+                <a class="but btn-sm float-right mb-3" asp-page="/Details" asp-route-id="@item.TrainerID">View</a>
+
             </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="row no-gutters border mb-4">
-            <div class="col p-4 d-flex flex-column">
-                <p class="card-text mb-auto">
-                    You can download the completed project from GitHub.
-                </p>
-                <p>
-                    <a href="https://github.com/dotnet/AspNetCore.Docs/tree/master/aspnetcore/data/ef-rp/intro/samples" class="stretched-link">See project source code</a>
-                </p>
-            </div>
-        </div>
+        }
     </div>
 </div>

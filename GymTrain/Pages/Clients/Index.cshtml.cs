@@ -29,13 +29,23 @@ namespace GymTrain.Pages.Clients
         public string CurrentSort { get; set; }
 
         public IList<Client> Clients { get;set; }
-        public async Task OnGetAsync(string sortOrder)
+        public async Task OnGetAsync(string sortOrder, string searchString)
         {
             FirstMidNameSort = String.IsNullOrEmpty(sortOrder) ? "firstname_desc" : "";
             LastNameSort = String.IsNullOrEmpty(sortOrder) ? "lastname_desc" : "";
             StartDateSort = sortOrder == "Date" ? "date_desc" : "Date";
 
+            CurrentFilter = searchString;
+
             IQueryable<Client> clientsIQ = from c in _context.Clients select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                // makes search case insensitive: .ToUpper().Contains(searchString.ToUpper()
+                clientsIQ = clientsIQ.Where(c => c.LastName.ToUpper().Contains(searchString.ToUpper())
+                                       || c.FirstMidName.ToUpper().Contains(searchString.ToUpper()));
+                     
+            }
 
             switch (sortOrder)
             {
