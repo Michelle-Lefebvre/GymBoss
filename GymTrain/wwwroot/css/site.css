@@ -41,10 +41,10 @@ a.but:hover {
 -------------------------------------------------- */
 .friendInfo {
   background-color: lightgray;
-  margin-left: 0.25rem;
+  /* margin-left: 0.25rem;
   margin-right: 0.25rem;
   border-radius: 0.25rem;
-  width: calc(100% - 0.6rem);
+  width: calc(100% - 0.6rem); */
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
