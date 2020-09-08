@@ -20,8 +20,8 @@ ViewData["Title"] = "Details";
                         alt="Image of @Html.DisplayFor(model => model.Trainer.FirstMidName)" />
                 </div>
                 <div class="action p-2">
-                    <a asp-page="./Edit" asp-route-id="@Model.Trainer.TrainerID">Edit</a> |
-                    <a asp-page="./Index">Back to List</a>
+                    <a class="but btn-sm" asp-page="./Edit" asp-route-id="@Model.Trainer.TrainerID">Edit</a> 
+                    <a class="but btn-sm" asp-page="./Index">Back to List</a>
                 </div>
             </div>
             <div class="col-sm-8 mt-5 mb-3">
