@@ -22,6 +22,6 @@ namespace GymTrain.Models
         public decimal Thigh { get; set; }
         public decimal Calves { get; set; }
 
-        public ICollection<Result> Results { get; set; }
+        // public ICollection<Client> Client { get; set; }
     }
 }
